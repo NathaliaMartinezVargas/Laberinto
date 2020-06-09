@@ -8,3 +8,6 @@ El laberinto busca un único camino de recorrido en donde se encuentre la letra 
 
 ## Matriz
 ![Matriz](https://github.com/NathaliaMartinezVargas/Laberinto/blob/master/Matriz.png)
+
+## Laberinto Resuelto
+![Laberinto]()
