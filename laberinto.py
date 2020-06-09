@@ -1,8 +1,6 @@
-#Leer archivo txt con la matriz del laberinto
 def camino(archivo):
     return [x.split(" ") for x in open(archivo).readlines()]
 
-#Buscando un parametro en el laberinto
 def buscar_en_matriz(matriz, cont, valor):
     if matriz == []:
       return (-1, -1)
@@ -10,7 +8,6 @@ def buscar_en_matriz(matriz, cont, valor):
       return (cont, matriz[0].index(valor))
     return buscar_en_matriz(matriz[1:], cont + 1, valor)
 
-# Separando los movimientos
 def movRight(y,x,matriz,movimientos):
   if (x+1) >= len(matriz[0]) or (x+1) < 0 or matriz[y][x+1] == '1' or matriz[y][x] == 'Y':
     mover(y,x,matriz,movimientos+[[y,x]])
@@ -39,7 +36,6 @@ def movDown(y, x, matriz, movimientos):
   else:
     movDown(y+1, x, matriz, movimientos+[[y,x]])
 
-## En esta función definimos los movimientos 
 def mover(y,x,matriz,movimientos):
   if (y,x)== buscar_en_matriz(matriz,0,'Y'):
     print(movimientos)
